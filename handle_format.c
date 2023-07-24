@@ -18,6 +18,9 @@ int handle_format_specifier(char specifier, va_list args)
 	case '%':
 		_putchar('%');
 		return (1);
+	case 'd':
+	case 'i':
+		return (print_number(va_arg(args, int)));
 	default:
 		_putchar('%');
 		_putchar(specifier);
