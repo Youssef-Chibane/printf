@@ -23,14 +23,6 @@ int handle_format_specifier(char specifier, va_list args)
 		return (print_number(va_arg(args, int)));
 	case 'b':
 	return (print_binary(va_arg(args, unsigned int)));
-	case 'u':
-		return (print_unsigned_decimal(va_arg(args, unsigned int)));
-	case 'o':
-		return (print_octal(va_arg(args, unsigned int)));
-	case 'x':
-		return (print_hexadecimal(va_arg(args, unsigned int), 0));
-	case 'X':
-		return (print_hexadecimal(va_arg(args, unsigned int), 1));
 	default:
 		_putchar('%');
 		_putchar(specifier);
