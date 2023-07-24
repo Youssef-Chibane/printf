@@ -8,7 +8,7 @@
 int	_putchar(char c);
 int	print_string(char *str);
 int	print_number(int n);
-int	print_unsigned(unsigned int n);
+int print_unsigned_int(unsigned int n);
 int	print_octal(unsigned int n);
 int	print_hexadecimal(unsigned int n, int uppercase);
 int handle_format_specifier(char specifier, va_list args);
