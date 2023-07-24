@@ -32,8 +32,6 @@ int handle_format_specifier(char specifier, va_list args)
 	case 'X':
 		return (print_hexadecimal(va_arg(args, unsigned int), 1));
 	default:
-		_putchar('%');
-		_putchar(specifier);
-		return (2);
+		break;
 	}
 }
