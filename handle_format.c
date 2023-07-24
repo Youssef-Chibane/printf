@@ -15,11 +15,11 @@ int handle_format_specifier(char specifier, va_list args)
 		return (_putchar(va_arg(args, int)));
 	case 's':
 		return (print_string(va_arg(args, char *)));
-/*
 	case '%':
 		_putchar('%');
 		return (1);
-	*case 'd':
+/*
+	case 'd':
 	case 'i':
 		return (print_number(va_arg(args, int)));
 	case 'u':
@@ -32,8 +32,8 @@ int handle_format_specifier(char specifier, va_list args)
 		return (print_hexadecimal(va_arg(args, unsigned int), 1));
 */
 	default:
-		_putchar('%');;
-		return (1);
+		_putchar('%');
+		_putchar(specifier);
+		return (2);
 	}
 }
-
