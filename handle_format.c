@@ -21,6 +21,8 @@ int handle_format_specifier(char specifier, va_list args)
 	case 'd':
 	case 'i':
 		return (print_number(va_arg(args, int)));
+    	case 'b':
+        return print_binary(va_arg(args, unsigned int));
 	default:
 		_putchar('%');
 		_putchar(specifier);
