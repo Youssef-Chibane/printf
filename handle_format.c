@@ -15,10 +15,10 @@ int handle_format_specifier(char specifier, va_list args)
 		return (_putchar(va_arg(args, int)));
 	case 's':
 		return (print_string(va_arg(args, char *)));
-	case '%': /* Check for consecutive '%' characters */
+/*
+	case '%':
 		_putchar('%');
 		return (1);
-	/*
 	*case 'd':
 	case 'i':
 		return (print_number(va_arg(args, int)));
@@ -30,11 +30,10 @@ int handle_format_specifier(char specifier, va_list args)
 		return (print_hexadecimal(va_arg(args, unsigned int), 0));
 	case 'X':
 		return (print_hexadecimal(va_arg(args, unsigned int), 1));
-	*/
+*/
 	default:
-		_putchar('%');
-		_putchar(specifier);
-		return (2);
+		_putchar('%');;
+		return (1);
 	}
 }
 
