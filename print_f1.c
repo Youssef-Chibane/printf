@@ -19,31 +19,20 @@ int _putchar(char c)
  * Return: The number of characters printed.
  */
 
-int print_string(const char *str)
+int print_string(char *str)
 {
-	int count = 0;
+	int i = 0;
 
-	if (str)
+	if (str == NULL)
 	{
-	while (*str)
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i])
 	{
-		_putchar(*str);
-		str++;
-		count++;
+		_putchar(str[i++]);
 	}
-	}
-	else
-	{
-	const char *null_str = "(null)";
-
-	while (*null_str)
-	{
-		_putchar(*null_str);
-		null_str++;
-		count++;
-	}
-	}
-	return (count);
+	return (i);
 }
 
 /**
@@ -100,6 +89,7 @@ int print_number(int n)
  *
  * Return: The number of characters printed.
  */
+
 int print_binary(unsigned int n)
 {
 	int count = 0;
@@ -114,3 +104,4 @@ int print_binary(unsigned int n)
 
 	return (count);
 }
+
