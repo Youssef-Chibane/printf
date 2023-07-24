@@ -10,6 +10,7 @@
  *
  * Return: The number of characters printed.
  */
+
 int print_hexadecimal(unsigned int n, int uppercase)
 {
 	int count = 0;
@@ -49,6 +50,7 @@ int print_hexadecimal(unsigned int n, int uppercase)
  *
  * Return: The number of characters printed.
  */
+
 int print_octal(unsigned int n)
 {
 	int count = 0;
@@ -78,8 +80,6 @@ int print_octal(unsigned int n)
 	return (count);
 }
 
-#include <stdio.h>
-
 /**
  * print_unsigned_decimal - Prints an unsigned decimal number.
  *
@@ -87,13 +87,14 @@ int print_octal(unsigned int n)
  *
  * Return: The number of characters printed.
  */
+
 int print_unsigned_decimal(unsigned int num)
 {
 	int count = 0;
 
 	if (num == 0)
 	{
-		count += putchar('0');
+		count += _putchar('0');
 		return (count);
 	}
 
@@ -115,7 +116,7 @@ int print_unsigned_decimal(unsigned int num)
 	do {
 		unsigned int digit = num / divisor;
 
-		count += putchar('0' + digit);
+		count += _putchar('0' + digit);
 		num -= digit * divisor;
 		divisor /= 10;
 	} while (divisor);
