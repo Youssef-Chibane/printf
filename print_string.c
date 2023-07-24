@@ -7,24 +7,29 @@
  * Return: The number of characters printed.
  */
 
-int print_string(char *str)
+int print_string(const char *str)
 {
-	if (str == NULL)
-	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('u');
-		_putchar('l');
-		_putchar('l');
-		_putchar(')');
-		return (6);
-	}
-	int i = 0;
+	int count = 0;
 
-	while (str[i])
+	if (str)
 	{
-		_putchar(str[i]);
-		i++;
+	while (*str)
+	{
+		_putchar(*str);
+		str++;
+		count++;
 	}
-	return (i);
+	}
+	else
+	{
+	const char *null_str = "(null)";
+
+	while (*null_str)
+	{
+		_putchar(*null_str);
+		null_str++;
+		count++;
+	}
+	}
+	return (count);
 }
