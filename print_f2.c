@@ -78,7 +78,7 @@ int print_hexadecimal(unsigned int n, int uppercase)
 /**
  * print_npc - Prints a string with custom formatting.
  * @str: The string to be printed.
- * 
+ *
  * Return: The number of characters printed.
  */
 
