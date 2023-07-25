@@ -34,6 +34,6 @@ int handle_format_specifier(char specifier, va_list args)
 	default:
 		_putchar('%');
 		_putchar(specifier);
-		return (3);
+		return (2);
 	}
 }
