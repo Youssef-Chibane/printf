@@ -28,11 +28,6 @@ int	handle_format_specifier(char specifier, va_list args)
 		return (print_hexadecimal(va_arg(args, unsigned int), 0));
 	else if (specifier == 'X')
 		return (print_hexadecimal(va_arg(args, unsigned int), 1));
-<<<<<<< HEAD
-	else if (!_isalpha(specifier))
-		return (0);
-=======
->>>>>>> 6a3b6ca784277b993e21ba24893941eb97619af7
 	_putchar('%');
 	_putchar(specifier);
 	return (2);
