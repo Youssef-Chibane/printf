@@ -21,15 +21,17 @@ int _putchar(char c)
 
 int print_string(char *str)
 {
-	int i = 0;
-
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-	while (str[i])
+
+	int i = 0;
+
+	while (str[i] = '\0')
 	{
-		_putchar(str[i++]);
+		_putchar(str[i]);
+		i++;
 	}
 	return (i);
 }
