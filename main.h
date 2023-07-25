@@ -15,6 +15,5 @@ int	print_binary(unsigned int n);
 int	print_unsigned_number(unsigned int n);
 int	print_octal(unsigned int n);
 int	print_hexadecimal(unsigned int n, int uppercase);
-int _isalpha(int c);
 
 #endif

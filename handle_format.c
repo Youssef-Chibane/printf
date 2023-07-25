@@ -1,19 +1,6 @@
 #include "main.h"
 
 /**
- * _isalpha - a function that checks for alphabetic character
- * @c: the character that we will check
- * Return: 1 if true, 0 if not
- */
-
-int	_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
-}
-
-/**
  * handle_format_specifier - Handle the given format specifier.
  * @specifier: The format specifier character.
  * @args: The va_list of arguments.
@@ -41,8 +28,11 @@ int	handle_format_specifier(char specifier, va_list args)
 		return (print_hexadecimal(va_arg(args, unsigned int), 0));
 	else if (specifier == 'X')
 		return (print_hexadecimal(va_arg(args, unsigned int), 1));
+<<<<<<< HEAD
 	else if (!_isalpha(specifier))
 		return (0);
+=======
+>>>>>>> 6a3b6ca784277b993e21ba24893941eb97619af7
 	_putchar('%');
 	_putchar(specifier);
 	return (2);
