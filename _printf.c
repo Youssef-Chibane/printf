@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			if (*format == '\0')
-				break;
+				return (-1);
 			char_count += handle_format_specifier(*format, args);
 			format++;
 		}
