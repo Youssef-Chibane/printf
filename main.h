@@ -18,5 +18,6 @@ int		print_unsigned_number(unsigned int n);
 int		print_octal(unsigned int n);
 int		print_hexadecimal(unsigned int n, int uppercase);
 int		print_npc(char *str);
+int		rot13(char *str);
 
 #endif
