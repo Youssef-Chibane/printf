@@ -36,16 +36,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (char_count);
 }
-
-#include <stdio.h>
-
-int main()
-{
-	int	i;
-	int	j;
-
-	i = _printf("%2");
-    j = printf("%3");
-
-	printf("******\n_ return: %d\n p return: %d\n****", i, j);
-}
