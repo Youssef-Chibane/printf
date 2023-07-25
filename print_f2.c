@@ -120,11 +120,11 @@ int	putadrs(unsigned long n)
 	count = 0;
 	str = "0123456789abcdef";
 	if (n >= 0 && n <= 15)
-		ft_putchar (str[n]);
+		_putchar (str[n]);
 	else
 	{
-		ft_putadrs(n / 16);
-		ft_putadrs(n % 16);
+		putadrs(n / 16);
+		putadrs(n % 16);
 	}
 	if (n == 0)
 		return (1);
