@@ -76,21 +76,9 @@ int print_hexadecimal(unsigned int n, int uppercase)
 }
 
 /**
- * print_custom_string - Prints a string with custom formatting.
+ * print_npc - Prints a string with custom formatting.
  * @str: The string to be printed.
- *
- * This function prints the input string with special handling for
- * non-printable characters (ASCII value < 32 or >= 127).
- * Non-printable characters are represented as \x followed by their
- * ASCII code value in hexadecimal (upper case - always 2 characters).
- *
- * Example:
- * - Input: "Hello, \nWorld!"
- * - Output: "Hello, \x0AWorld!"
- *
- * Note: This function assumes the input string is null-terminated.
- * Note: The function does not handle Unicode or multi-byte characters.
- *
+ * 
  * Return: The number of characters printed.
  */
 
@@ -113,6 +101,37 @@ int	print_npc(char *str)
 		}
 		else
 			count += _putchar(str[i++]);
+	}
+	return (count);
+}
+
+/**
+ * putadrs - Prints the hexadecimal representation of an address.
+ * @n: The address to be printed.
+ *
+ * Return: The number of characters printed.
+ */
+
+int	putadrs(unsigned long n)
+{
+	char	*str;
+	int		count;
+
+	count = 0;
+	str = "0123456789abcdef";
+	if (n >= 0 && n <= 15)
+		ft_putchar (str[n]);
+	else
+	{
+		ft_putadrs(n / 16);
+		ft_putadrs(n % 16);
+	}
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		n /= 16;
+		count++;
 	}
 	return (count);
 }
