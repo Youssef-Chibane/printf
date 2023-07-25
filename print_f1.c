@@ -25,7 +25,7 @@ int print_string(char *str)
 
 	if (str == NULL)
 	{
-		write(1, "(null)", 6);
+		write(1, "(null)", );
 		return (6);
 	}
 	while (str[i])
