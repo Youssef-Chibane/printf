@@ -96,7 +96,7 @@ int	print_npc(char *str)
 			count += print_string("\\x");
 			if (str[i] < 17)
 				count += print_hexadecimal(0, 1);
-			count += print_hexadecimal(str[i], 1);
+			count += print_hexadecimal((unsigned int)str[i], 1);
 			i++;
 		}
 		else
