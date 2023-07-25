@@ -42,11 +42,13 @@ int	handle_format_specifier(char specifier, va_list args)
 	else if (specifier == 'X')
 		return (print_hexadecimal(va_arg(args, unsigned int), 1));
 	else if (!_isalpha(specifier))
+	{
 		return (0);
+	}
 	else
 	{
-		_putchar('%');
-		_putchar(specifier);
-		return (2);
+	_putchar('%');
+	_putchar(specifier);
+	return (2);
 	}
 }
