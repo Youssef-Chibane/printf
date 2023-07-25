@@ -75,3 +75,44 @@ int print_hexadecimal(unsigned int n, int uppercase)
 	return (count);
 }
 
+/**
+ * print_custom_string - Prints a string with custom formatting.
+ * @str: The string to be printed.
+ *
+ * This function prints the input string with special handling for
+ * non-printable characters (ASCII value < 32 or >= 127).
+ * Non-printable characters are represented as \x followed by their
+ * ASCII code value in hexadecimal (upper case - always 2 characters).
+ *
+ * Example:
+ * - Input: "Hello, \nWorld!"
+ * - Output: "Hello, \x0AWorld!"
+ *
+ * Note: This function assumes the input string is null-terminated.
+ * Note: The function does not handle Unicode or multi-byte characters.
+ *
+ * Return: The number of characters printed.
+ */
+
+int	print_npc(char *str)
+{
+	int	i;
+	int	count;
+
+	count = 0;
+	i = 0;
+	while (str[i])
+	{
+		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
+		{
+			count += print_string("\\x");
+			if (str[i] < 17)
+				count += print_hexadecimal(0, 1);
+			count += print_hexadecimal(str[i], 1);
+			i++;
+		}
+		else
+			count += _putchar(str[i++]);
+	}
+	return (count);
+}
