@@ -30,8 +30,6 @@ int	handle_format_specifier(char specifier, va_list args)
 		return (print_hexadecimal(va_arg(args, unsigned int), 1));
 	else if (specifier == 'S')
 		return (print_npc(va_arg(args, char *)));
-	else if (specifier == 'p')
-		return (putadrs(va_arg(args, unsigned long)));
 	_putchar('%');
 	_putchar(specifier);
 	return (2);

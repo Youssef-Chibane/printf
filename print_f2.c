@@ -104,34 +104,3 @@ int	print_npc(char *str)
 	}
 	return (count);
 }
-
-/**
- * putadrs - Prints the hexadecimal representation of an address.
- * @n: The address to be printed.
- *
- * Return: The number of characters printed.
- */
-
-int	putadrs(unsigned long n)
-{
-	char	*str;
-	int		count;
-
-	count = 0;
-	str = "0123456789abcdef";
-	if (n >= 0 && n <= 15)
-		_putchar (str[n]);
-	else
-	{
-		putadrs(n / 16);
-		putadrs(n % 16);
-	}
-	if (n == 0)
-		return (1);
-	while (n != 0)
-	{
-		n /= 16;
-		count++;
-	}
-	return (count);
-}
