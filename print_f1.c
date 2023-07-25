@@ -21,17 +21,16 @@ int _putchar(char c)
 
 int print_string(char *str)
 {
-	if (str == NULL)
-	{
-		str = "(null)";
-	}
-
 	int i = 0;
 
-	while (str[i] = '\0')
+	if (str == NULL)
 	{
-		_putchar(str[i]);
-		i++;
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i])
+	{
+		_putchar(str[i++]);
 	}
 	return (i);
 }
