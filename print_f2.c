@@ -89,12 +89,12 @@ int	print_npc(char *str)
 
 	count = 0;
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
 		if ((str[i] >= 0 && str[i] <= 31) || str[i] == 127)
 		{
 			count += print_string("\\x");
-			if (str[i] < 17)
+			if (str[i] < 16)
 				count += print_hexadecimal(0, 1);
 			count += print_hexadecimal((unsigned int)str[i], 1);
 			i++;
