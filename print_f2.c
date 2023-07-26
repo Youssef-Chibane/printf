@@ -82,25 +82,27 @@ int print_hexadecimal(unsigned int n, int uppercase)
  * Return: The number of characters printed.
  */
 
-int	print_npc(char *str)
+int print_npc(char *str)
 {
-	int	i;
-	int	count;
+	int i;
+	int count;
 
 	count = 0;
 	i = 0;
-	while (str[i])
+	while (str[i] != '\0')
 	{
 		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
 		{
 			count += print_string("\\x");
-			if (str[i] < 16)
+			if (str[i] < 0x10)
 				count += print_hexadecimal(0, 1);
-			count += print_hexadecimal((unsigned int)str[i], 1);
+			count += print_hexadecimal((unsigned int)str[i], 2);
 			i++;
 		}
 		else
+		{
 			count += _putchar(str[i++]);
+		}
 	}
 	return (count);
 }
