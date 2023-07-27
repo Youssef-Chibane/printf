@@ -4,7 +4,7 @@ This is the first ALX team project where we try to recreate the C library functi
 ## Screenshots
 
 ![App Screenshot](https://i.imgur.com/RebjvOk.png)
-## WHAT IS PRINTF
+## WHAT IS PRINTF?
 
 A function that produces output according to a format. It takes one or multiple parameters with the help of the variadic functions that we used while implementing our own printf.
 
